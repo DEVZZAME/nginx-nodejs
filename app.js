@@ -12,10 +12,12 @@ app.use(express.static('public'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 
-const router = require('./routes/index');
+const router1 = require('./routes/index1');
+const router2 = require('./routes/index2');
 
 
-app.use('/', router);
+app.use('/', router1);
+app.use('/', router2);
 
 
 app.listen(3006, () => {
